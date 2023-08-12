@@ -6,6 +6,7 @@ import Register from "./pages/Register";
 
 import Navbar from "./components/Navbar";
 import AdminProduct from "./pages/AdminProduct";
+import Products from "./pages/Products";
 
 function App() {
   return (
@@ -26,8 +27,8 @@ function App() {
             element={<AdminProduct />}
           />
           <Route
-            path={ClientRoutes.AdminRoutes.admin_product_route}
-            element={<AdminProduct />}
+            path={ClientRoutes.ProductRoutes.base_route}
+            element={<Products />}
           />
         </Routes>
         

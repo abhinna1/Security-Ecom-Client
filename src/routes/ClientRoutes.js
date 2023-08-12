@@ -14,6 +14,13 @@ class UserRoutes extends Routes{
     static register_route = this.user_route + '/register';
 }
 
+class ProductRoutes extends Routes{
+    static base_route = this.product_route;
+    static product_detail_route = (id)=>this.product_route + '/' + id;
+    // static register_route = this.user_route + '/register';
+}
+
+
 
 class AdminRoutes extends Routes{
     static base_route = this.admin_route;
@@ -24,4 +31,5 @@ export default {
     Routes,
     UserRoutes,
     AdminRoutes,
+    ProductRoutes,
 };

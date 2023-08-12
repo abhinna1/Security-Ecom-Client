@@ -1,7 +1,7 @@
 class BaseRoute{
     static base_route = 'http://localhost:8000/';
     static media_route = this.base_route + 'media/';
-    static store_rotue = this.base_route + 'store/'
+    static store_rotue = this.base_route + ''
 }
 
 class Routes extends BaseRoute{
@@ -18,8 +18,14 @@ class UserRoutes extends Routes{
     static register_route = this.user_route + 'register/';
 }
 
+class ProductRoutes extends Routes{
+    static base_route = this.product_route;
+    static product_detail_route = (id) => this.product_route + id + '/';
+}
+
 export default {
     BaseRoute,
     Routes,
     UserRoutes,
+    ProductRoutes
 }
